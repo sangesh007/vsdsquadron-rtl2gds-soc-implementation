@@ -1,0 +1,39 @@
+
+26. Printing statistics.
+
+=== user_project_wrapper ===
+
+        +----------Local Count, excluding submodules.
+        |        +-Local Area, excluding submodules.
+        |        | 
+      276        - wires
+      894        - wire bits
+       20        - public wires
+      638        - public wire bits
+       19        - ports
+      637        - port bits
+      497 5.71E+03 cells
+        4   25.024   sky130_fd_sc_hd__and2_0
+        1    6.256   sky130_fd_sc_hd__and3_1
+      207  1553.99   sky130_fd_sc_hd__buf_4
+        2    7.507   sky130_fd_sc_hd__clkinv_1
+        1    3.754   sky130_fd_sc_hd__conb_1
+       97 2.43E+03   sky130_fd_sc_hd__dfrtp_1
+       96 1.08E+03   sky130_fd_sc_hd__mux2_1
+       32  320.307   sky130_fd_sc_hd__mux2i_1
+        1    3.754   sky130_fd_sc_hd__nand2_1
+        1    5.005   sky130_fd_sc_hd__nand3_1
+        2   15.014   sky130_fd_sc_hd__nand3b_1
+       11   68.816   sky130_fd_sc_hd__nand4_1
+        1    8.758   sky130_fd_sc_hd__nand4b_1
+       33  123.869   sky130_fd_sc_hd__nor2_1
+        1    6.256   sky130_fd_sc_hd__nor2b_1
+        1    5.005   sky130_fd_sc_hd__nor3_1
+        2   12.512   sky130_fd_sc_hd__nor4_1
+        1    10.01   sky130_fd_sc_hd__nor4bb_1
+        1    8.758   sky130_fd_sc_hd__or3b_1
+        2   15.014   sky130_fd_sc_hd__or4_1
+
+   Chip area for module '\user_project_wrapper': 5707.974400
+     of which used for sequential elements: 2427.328000 (42.53%)
+
