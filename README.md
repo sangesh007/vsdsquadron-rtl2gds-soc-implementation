@@ -1,3 +1,232 @@
+# WEEK 2
+
+This section describes the installation steps for the ORFS in local machine.
+
+The following tools will be installed:
+
+- **OpenROAD** (specific version)
+- **Yosys** (specific commit)
+- **EQY** (specific commit)
+
+---
+
+## OpenROAD Installation
+
+Follow the steps below to install the required version of **OpenROAD**.
+
+### Step 1: Navigate to the Installation Directory
+
+Go to the `.devcontainer` directory inside the OpenROAD flow setup.
+
+```bash
+cd /home/sangesh007/Downloads/vsd-scl180-orfs-main/.devcontainer
+```
+
+---
+
+### Step 2: Modify the Installation Script
+
+Inside this directory, there is a script named:
+
+```
+install-openroad.sh
+```
+
+Open the script and modify the **ORFS variable** to the desired installation location.
+
+Example:
+
+```bash
+nano install-openroad.sh
+```
+
+Change the path of the `ORFS` variable according to your system.
+
+---
+
+### Step 3: Make the Script Executable
+
+```bash
+chmod +x install-openroad.sh
+```
+
+---
+
+### Step 4: Run the Installation Script
+
+```bash
+./install-openroad.sh
+```
+
+This script will automatically build and install **OpenROAD**.
+
+---
+
+### Step 5: Verify the Installation
+
+Check the installed OpenROAD version:
+
+```bash
+openroad -version
+```
+
+Expected output:
+
+```
+v2.0-28075-g0f99689f45
+```
+
+---
+
+## Yosys Installation
+
+Follow the steps below to install **Yosys** from source using a specific commit.
+
+---
+
+### Prerequisites
+
+Install the required dependencies before building Yosys.
+
+```bash
+sudo apt update
+sudo apt-get install -y binutils-dev g++-11 clang-18 bison flex \
+     libreadline-dev gawk tcl-dev libffi-dev git graphviz \
+     xdot pkg-config python3 zlib1g-dev
+```
+
+Install the development version of the C++ standard library:
+
+```bash
+sudo apt-get install -y libstdc++-11-dev
+```
+
+---
+
+### Step 1: Clone the Yosys Repository
+
+Navigate to the directory where you want to store the source code and clone the repository.
+
+```bash
+cd ~/Downloads
+git clone https://github.com/YosysHQ/yosys.git
+cd yosys
+```
+
+---
+
+### Step 2: Checkout the Required Commit
+
+Switch to the specific commit version.
+
+```bash
+git checkout 4011d7265
+```
+
+---
+
+### Step 3: Update Submodules
+
+Initialize and update the required submodules (including the **ABC synthesis tool**).
+
+```bash
+git submodule update --init --recursive
+```
+
+---
+
+### Step 4: Configure the Build
+
+Clean any previous builds and configure the build environment to use **GCC**.
+
+```bash
+make clean
+make config-gcc
+```
+
+---
+
+### Step 5: Build Yosys
+
+Compile the source code using all available processor cores.
+
+```bash
+make -j$(nproc)
+```
+
+---
+
+### Step 6: Install Yosys
+
+Install the compiled binary system-wide.
+
+```bash
+sudo make install
+```
+
+---
+
+### Verification
+
+Verify that the installation was successful.
+
+```bash
+yosys -V
+```
+
+Expected output:
+
+```
+Yosys 0.58+94 (git sha1 4011d7265, g++ 11.4.0-2ubuntu1~20.04 -fPIC -O3)
+```
+
+---
+
+## EQY Installation
+
+Follow the steps below to install **EQY (Equivalence Checking for Yosys)**.
+
+### Step 1: Clone the EQY Repository
+
+Navigate to the directory where you want to download the source code and clone the repository.
+
+```bash
+git clone https://github.com/YosysHQ/eqy.git
+cd eqy/
+```
+
+### Step 2: Install EQY
+
+Build and install EQY system-wide.
+
+```bash
+sudo make install
+```
+
+### Verification
+
+After installation, you can verify that EQY is available by running:
+
+```bash
+eqy --help
+```
+
+If installed correctly, this command will display the EQY usage and available options.
+
+### Running the openroad
+when you are runing the openroad make sure to run this
+
+```bash
+make YOSYS_EXE=$(which yosys) OPENROAD_EXE=$(which openroad)
+```
+## To view GDS
+```bash
+make klayout_6_final.gds
+```
+## Output
+![WhatsApp Image 2026-02-20 at 12 30 39 PM](https://github.com/user-attachments/assets/edefc059-da94-4943-909b-c2c0fb41f211)
+
+
 
 # WEEK 4
 ## RTL-to-GDS Implementation of User Project Wrapper
