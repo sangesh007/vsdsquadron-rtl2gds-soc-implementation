@@ -126,5 +126,5 @@ make: *** [Makefile:559: results/sky130hd/usr_wrapper/base/5_1_grt.odb] Error 2
 ```
 To fix this add this line in config.mk file:
 ```bash
-make klayout_6_final.gds
+EXPORT SKIP_INCREMENTAL_REPAIR = 1
 ```
