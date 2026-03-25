@@ -226,6 +226,112 @@ make klayout_6_final.gds
 ## Output
 ![WhatsApp Image 2026-02-20 at 12 30 39 PM](https://github.com/user-attachments/assets/edefc059-da94-4943-909b-c2c0fb41f211)
 
+# WEEK 3
+
+## Block-Level Verification of VSDSquadron SoC
+
+Clone the repository:
+
+```bash
+git clone https://github.com/vsdip/vsdsquadron-soc
+cd vsdsquadron-soc
+```
+## PHASE 1 — Standalone Block Verification
+
+### Task 1
+Go to this location:
+
+```bash
+cd caravel_mgmt_soc_litex/verilog/dv/tests-standalone/spi_master
+```
+Open the makefile and make the necessary changes to the variables:
+```bash
+DESIGNS ?= /home/sangesh007/Downloads/vsdsquadron-soc
+export PDK_ROOT ?= /home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/
+export GCC_PATH   ?= /usr/bin/
+```
+And change the iverilog path too. Save the file and open CMD and run
+```bash
+make clean
+make
+```
+### spi_master result
+
+<img width="1004" height="855" alt="Screenshot 2026-03-15 165736" src="https://github.com/user-attachments/assets/5e844725-d7a2-4309-af8a-da347cd886db" />
+## PHASE 2 — Run All Standalone Tests
+Navigate to all the tests and make the changes in their Makefile. and run the tests and note the results
+
+## Tests - Standalone (sky130)
+
+| Test Name   | Status |
+|------------|--------|
+| GPIO Mgmt  | ✅ PASS |
+| mem        | ✅ PASS |
+| uart       | ✅ PASS |
+| timer      | ❌ FAIL |
+| irq        | ❌ FAIL |
+| debug      | ❌ FAIL |
+| spi_master | ✅ PASS |
+
+### GPIO Mgmt
+
+<img width="941" height="833" alt="Screenshot 2026-03-15 170111" src="https://github.com/user-attachments/assets/6644010b-bb08-48b2-8ee4-5a608d238a8b" />
+
+### mem
+
+<img width="952" height="849" alt="Screenshot 2026-03-15 170422" src="https://github.com/user-attachments/assets/f2f79def-7dda-4953-846d-1eae76de14e0" />
+
+### uart
+
+<img width="939" height="842" alt="Screenshot 2026-03-15 170610" src="https://github.com/user-attachments/assets/988ab1ca-6f57-4745-9302-7aada99678ab" />
+
+### timer
+
+<img width="1035" height="854" alt="Screenshot 2026-03-15 170832" src="https://github.com/user-attachments/assets/e446c3c0-337d-4de9-8970-a022d3c410a1" />
+
+### irq
+
+<img width="956" height="830" alt="Screenshot 2026-03-15 170812" src="https://github.com/user-attachments/assets/b418620d-13a3-4916-818f-1dffdb089abb" />
+
+### debug
+
+<img width="1115" height="838" alt="Screenshot 2026-03-15 171015" src="https://github.com/user-attachments/assets/fa22d312-6401-46cd-9ef9-c39ad81afc19" />
+
+## PHASE 3 — Caravel Integrated Tests
+Navigate to test-caravel folder
+```bash
+cd ../
+cd tests-caravel
+```
+Go to each folder and change the variables in the makefile accordingly 
+```bash
+DESIGNS ?= /home/sangesh007/Downloads/vsdsquadron-soc
+export PDK_ROOT ?= /home/sangesh007/Desktop/chip_design/open_pdks/sky130/
+export GCC_PATH   ?= /usr/bin/
+```
+And change the iverilog path too.. \
+run the tests and note the results
+
+## Tests - Caravel
+
+| Test Name      | Status   |
+|----------------|----------|
+| user_pass_thru | ✅ PASS  |
+| uart           | ✅ PASS  |
+| sysctrl        | ❌ FAIL  |
+| sram_exec      | ✅ PASS  |
+| spi_master     | ✅ PASS  |
+| pullupdown     | ✅ PASS  |
+| pll            | ❌ FAIL  |
+| pass_thru_fix  | ✅ PASS  |
+| mem            | ✅ PASS  |
+| hkspi_power    | ✅ PASS  |
+| gpio_mgmt      | ✅ PASS  |
+| hkspi          | ✅ PASS  |
+
+## PHASE 4 — Verification Flow Understanding
+<img width="1084" height="4635" alt="mermaid-diagram" src="https://github.com/user-attachments/assets/1d08168a-2dd8-4aa1-956f-7105d75556f1" />
+
 
 
 # WEEK 4
