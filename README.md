@@ -463,3 +463,172 @@ To fix this add this line in config.mk file:
 ```bash
 EXPORT SKIP_INCREMENTAL_REPAIR = 1
 ```
+
+# WEEK 5
+
+## Gate-Level Simulation (GLS) for Full Block Verification
+The objective of Week-5 is to perform gate-level simulation (GLS) using the synthesized implementation of __user_project_wrapper and validate it against the functional verification results from Week-3
+
+## PHASE 1 — Prepare Gate-Level Netlist Integration
+
+The gate level netlist is found in this path:
+
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/results/sky130hd/usr_wrapper/base/6_final.v
+```
+<img width="733" height="429" alt="Screenshot 2026-03-29 134417" src="https://github.com/user-attachments/assets/fbcc0e1e-c3dc-4d23-a585-11491c27aa65" />
+
+The standard cells will be found in this path:
+```bash
+/home/sangesh007/.volare/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
+/home/sangesh007/.volare/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
+```
+## PHASE 2 — Modify Verification Flow for GLS
+
+In the Makefile of each standalone test make these changes :-
+Go to any this location and open any test:
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-standalone/spi_master
+vi Makefile
+```
+and make the changes accordingly
+
+<img width="749" height="320" alt="Screenshot 2026-03-29 135019" src="https://github.com/user-attachments/assets/d2ba1ba7-6c0c-40fe-9825-68f5f3355d37" />
+
+<img width="1102" height="361" alt="Screenshot 2026-03-29 135155" src="https://github.com/user-attachments/assets/05c6279a-5233-48af-a913-96631eacd1ba" />
+
+Go to this location:
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/gl
+```
+Make sure to have these files in this location
+
+<img width="731" height="51" alt="Screenshot 2026-03-29 135453" src="https://github.com/user-attachments/assets/80ed3451-dfb7-4381-99e3-2a021612aa4c" />
+
+If these files are not found you can take these files from this location:
+
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/rtl
+```
+
+Open the mgmt_core_wrapper.v and add these lines
+
+<img width="733" height="173" alt="Screenshot 2026-03-29 135925" src="https://github.com/user-attachments/assets/8c87596b-f201-477e-91bd-c5769d550b16" />
+
+Go to this location:
+
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/includes
+```
+And open the includes.gl.standalone this file and comment this line
+
+<img width="764" height="464" alt="Screenshot 2026-03-29 140250" src="https://github.com/user-attachments/assets/b094a409-2422-4d69-b575-ee1597d67f0d" />
+
+Now run the each tests and note down the results
+
+## PHASE 3 — Run GLS for Standalone Tests
+
+| Test Name   | RTL Status (Week-3) | GLS Status |
+|------------|--------| --------|
+| GPIO Mgmt  | ✅ PASS | ✅ PASS |
+| mem        | ✅ PASS | ✅ PASS |
+| uart       | ✅ PASS | ✅ PASS |
+| timer      | ❌ FAIL | ❌ FAIL |
+| irq        | ❌ FAIL | ❌ FAIL |
+| debug      | ❌ FAIL | ❌ FAIL |
+| spi_master | ✅ PASS | ✅ PASS |
+
+spi_master:
+
+<img width="685" height="702" alt="Screenshot 2026-03-27 122709" src="https://github.com/user-attachments/assets/7ee09ebe-03dd-4dd0-ac0a-c43b35193b05" />
+
+GPIO Mgmt:
+
+<img width="676" height="694" alt="Screenshot 2026-03-27 125720" src="https://github.com/user-attachments/assets/e2385761-3209-40fc-a131-1058947f4014" />
+
+mem:
+
+<img width="576" height="466" alt="Screenshot 2026-03-27 163620" src="https://github.com/user-attachments/assets/b6c125c7-4148-44bd-9581-43bd49bf46ed" />
+
+uart:
+
+<img width="1142" height="623" alt="Screenshot 2026-03-27 181231" src="https://github.com/user-attachments/assets/a364fee9-6d6a-4fb2-82a7-86ce245cdce4" />
+
+timer:
+
+<img width="635" height="628" alt="Screenshot 2026-03-27 184638" src="https://github.com/user-attachments/assets/71f9ae82-3554-4b28-a82e-72fc8898c3e8" />
+
+irq:
+
+<img width="616" height="620" alt="Screenshot 2026-03-27 190050" src="https://github.com/user-attachments/assets/0c1a4511-27c0-4732-8e55-f169dd1a95ae" />
+
+debug:
+<img width="1284" height="628" alt="Screenshot 2026-03-27 192317" src="https://github.com/user-attachments/assets/9005c9d2-b02d-478a-8bd9-fc655bd07ef8" />
+
+
+## PHASE 4 — Run GLS for Caravel Integrated Tests
+
+For caravel tests:
+Go to this location:
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-caravel/ 
+```
+Go to any test and open the makefile and make the following changes
+
+<img width="686" height="318" alt="Screenshot 2026-03-29 143209" src="https://github.com/user-attachments/assets/a45a7005-162d-479f-80b9-93361db95ded" />
+
+<img width="825" height="287" alt="Screenshot 2026-03-29 143256" src="https://github.com/user-attachments/assets/841c874e-b921-45fb-a0d4-4cfb1e694091" />
+
+Go to this location and make sure to have these files in this location:
+``` bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel/verilog/gl
+```
+<img width="663" height="660" alt="Screenshot 2026-03-29 143524" src="https://github.com/user-attachments/assets/063ead05-749e-42a1-a52f-2dabd2b58593" />
+
+Not everything is required to know the exact required files for the simulation, 
+Go to this location:
+
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/includes
+```
+And open the includes.gl.caravel this file it contains the required file. 
+If any of the files are missing you can copy it from this location: 
+
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel/verilog/rtl
+```
+
+In the gatelevel netlist 6_final.v , make sure to add these ports as inout
+
+<img width="346" height="439" alt="Screenshot 2026-03-29 151409" src="https://github.com/user-attachments/assets/cb95b3d2-a41e-4ac7-b3dc-3fcec7f3a1f9" />
+
+Now run the each tests and note down the results
+
+| Test Name      | RTL Status (Week-3)| GLS Status |
+|----------------|----------|----------|
+| user_pass_thru | ✅ PASS  | ✅ PASS  |
+| uart           | ✅ PASS  | ✅ PASS  |
+| sysctrl        | ❌ FAIL  | ❌ FAIL  |
+| sram_exec      | ✅ PASS  | ✅ PASS  |
+| spi_master     | ✅ PASS  | ✅ PASS  |
+| pullupdown     | ✅ PASS  | ✅ PASS  |
+| pll            | ❌ FAIL  | ❌ FAIL  |
+| pass_thru_fix  | ✅ PASS  | ✅ PASS  |
+| mem            | ✅ PASS  | ✅ PASS  |
+| hkspi_power    | ✅ PASS  | ✅ PASS  |
+| gpio_mgmt      | ✅ PASS  | ✅ PASS  |
+| hkspi          | ✅ PASS  | ✅ PASS  |
+
+## PHASE 5 — GTKWave Visualization
+Open any test
+Example:
+```bash
+Cd ~/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-standalone/mem
+Gtkwave GL-mem.vcd
+```
+<img width="1849" height="957" alt="Screenshot 2026-03-29 145256" src="https://github.com/user-attachments/assets/a0a33c44-1965-4472-a31b-a12a3735aa0f" />
+
+We can see that the the waveform corresponds to gate-level netlist activity of the standard cell sky130_fd_sc_hd_mux2_1
+
+## PHASE 6 — RTL vs GLS Comparison
+There are no test result mismatch between RTL and GLS
