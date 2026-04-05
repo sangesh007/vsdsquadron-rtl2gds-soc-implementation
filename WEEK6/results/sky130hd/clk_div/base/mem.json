@@ -1,0 +1,2237 @@
+{
+  "creator": "Yosys 0.58+94 (git sha1 4011d7265, g++ 11.4.0-2ubuntu1~20.04 -fPIC -O3)",
+  "modules": {
+    "clock_div": {
+      "attributes": {
+        "hdlname": "clock_div",
+        "dynports": "00000000000000000000000000000001",
+        "top": "00000000000000000000000000000001",
+        "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:20.1-61.10"
+      },
+      "parameter_default_values": {
+        "SIZE": "00000000000000000000000000000011"
+      },
+      "ports": {
+        "in": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "out": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "N": {
+          "direction": "input",
+          "bits": [ 4, 5, 6 ]
+        },
+        "resetb": {
+          "direction": "input",
+          "bits": [ 7 ]
+        }
+      },
+      "cells": {
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5471": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.19-41.37"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 8 ],
+            "B": [ 9 ],
+            "Y": [ 10 ]
+          }
+        },
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5472": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.19-41.48"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 10 ],
+            "B": [ 11 ],
+            "Y": [ 12 ]
+          }
+        },
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5474": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.53-41.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 13 ],
+            "B": [ 14 ],
+            "Y": [ 15 ]
+          }
+        },
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:42$5476": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:42.25-42.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "B": [ 11 ],
+            "Y": [ 16 ]
+          }
+        },
+        "$auto$alumacc.cc:106:get_cf$5674": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:135.23-135.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 17 ],
+            "Y": [ 18 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$5653": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:209.14-209.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 19, 20, 21 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 22, 23, 24 ],
+            "X": [ 25, 26, 27 ],
+            "Y": [ 28, 29, 30 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$5658": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000100"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:107.23-107.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "1", "1" ],
+            "B": [ 9, 31, 32 ],
+            "BI": [ "0" ],
+            "CI": [ "0" ],
+            "CO": [ 33, 34, 35, 36 ],
+            "X": [ 37, 38, 39, 40 ],
+            "Y": [ 41, 42, 43, 44 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$5661": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:100.14-100.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 45, 46, 47 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 48, 49, 50 ],
+            "X": [ 51, 52, 53 ],
+            "Y": [ 54, 55, 56 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$5666": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:132.15-132.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 57, 58, 59 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 60, 61, 62 ],
+            "X": [ 63, 64, 65 ],
+            "Y": [ 66, 67, 68 ]
+          }
+        },
+        "$auto$alumacc.cc:512:replace_alu$5671": {
+          "hide_name": 1,
+          "type": "$alu",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:135.23-135.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "BI": "input",
+            "CI": "input",
+            "CO": "output",
+            "X": "output",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 69, 70, 71 ],
+            "B": [ "1" ],
+            "BI": [ "1" ],
+            "CI": [ "1" ],
+            "CO": [ 72, 73, 17 ],
+            "X": [ 74, 75, 76 ],
+            "Y": [ 77, 78, 79 ]
+          }
+        },
+        "$auto$alumacc.cc:548:replace_alu$5678": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 80, 18 ],
+            "Y": [ 81 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$5656": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:209.14-209.23"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 25, 26, 27 ],
+            "Y": [ 82 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$5664": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:100.14-100.28"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 51, 52, 53 ],
+            "Y": [ 83 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$5669": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:132.15-132.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 63, 64, 65 ],
+            "Y": [ 84 ]
+          }
+        },
+        "$auto$alumacc.cc:92:get_eq$5676": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:135.23-135.43"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 74, 75, 76 ],
+            "Y": [ 80 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5618": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:88.5-103.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 85 ],
+            "EN": [ 86 ],
+            "Q": [ 87 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5625": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "010",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:88.5-103.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 88, 89, 90 ],
+            "EN": [ 91 ],
+            "Q": [ 45, 46, 47 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5628": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "0",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:151.5-162.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 92 ],
+            "EN": [ 16 ],
+            "Q": [ 93 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5629": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "010",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 94, 95, 96 ],
+            "EN": [ 97 ],
+            "Q": [ 69, 70, 71 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5636": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 98 ],
+            "EN": [ 99 ],
+            "Q": [ 100 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5643": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "010",
+            "CLK_POLARITY": "00000000000000000000000000000000",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 101, 102, 103 ],
+            "EN": [ 104 ],
+            "Q": [ 57, 58, 59 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5646": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "1",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000001",
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:195.5-212.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 105 ],
+            "EN": [ 106 ],
+            "Q": [ 107 ]
+          }
+        },
+        "$auto$ff.cc:266:slice$5651": {
+          "hide_name": 1,
+          "type": "$adffe",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "001",
+            "CLK_POLARITY": "00000000000000000000000000000001",
+            "EN_POLARITY": "00000000000000000000000000000000",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:195.5-212.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "EN": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 2 ],
+            "D": [ 108, 109, 110 ],
+            "EN": [ 9 ],
+            "Q": [ 19, 20, 21 ]
+          }
+        },
+        "$auto$opt_dff.cc:248:make_patterns_logic$5620": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 83, 93 ],
+            "Y": [ 111 ]
+          }
+        },
+        "$auto$opt_dff.cc:248:make_patterns_logic$5622": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 16, 93 ],
+            "Y": [ 91 ]
+          }
+        },
+        "$auto$opt_dff.cc:248:make_patterns_logic$5631": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 112, 93 ],
+            "B": [ "1" ],
+            "Y": [ 113 ]
+          }
+        },
+        "$auto$opt_dff.cc:248:make_patterns_logic$5638": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 84, 93 ],
+            "Y": [ 114 ]
+          }
+        },
+        "$auto$opt_dff.cc:248:make_patterns_logic$5640": {
+          "hide_name": 1,
+          "type": "$reduce_bool",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 112, 93 ],
+            "Y": [ 104 ]
+          }
+        },
+        "$auto$opt_dff.cc:263:make_patterns_logic$5647": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 115 ]
+          }
+        },
+        "$auto$opt_dff.cc:273:make_patterns_logic$5624": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 111, 91 ],
+            "Y": [ 86 ]
+          }
+        },
+        "$auto$opt_dff.cc:273:make_patterns_logic$5635": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 113, 91 ],
+            "Y": [ 97 ]
+          }
+        },
+        "$auto$opt_dff.cc:273:make_patterns_logic$5642": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 104, 114 ],
+            "Y": [ 99 ]
+          }
+        },
+        "$auto$opt_dff.cc:273:make_patterns_logic$5650": {
+          "hide_name": 1,
+          "type": "$reduce_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000100",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 115, 25, 26, 27 ],
+            "Y": [ 106 ]
+          }
+        },
+        "$flatten\\even_0.$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5500": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.19-191.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 2 ],
+            "B": [ 116 ],
+            "Y": [ 117 ]
+          }
+        },
+        "$flatten\\even_0.$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5501": {
+          "hide_name": 1,
+          "type": "$and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.39-191.61"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 107 ],
+            "B": [ 11 ],
+            "Y": [ 118 ]
+          }
+        },
+        "$flatten\\even_0.$logic_not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5499": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.25-191.34"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 11 ],
+            "Y": [ 116 ]
+          }
+        },
+        "$flatten\\even_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:206$5506": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:206.18-206.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 107 ],
+            "Y": [ 105 ]
+          }
+        },
+        "$flatten\\even_0.$or$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5502": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.18-191.62"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 117 ],
+            "B": [ 118 ],
+            "Y": [ 13 ]
+          }
+        },
+        "$flatten\\even_0.$procmux$5514": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:202.10-202.22|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:202.6-210.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 28, 29, 30 ],
+            "B": [ 31, 32, "0" ],
+            "S": [ 82 ],
+            "Y": [ 108, 109, 110 ]
+          }
+        },
+        "$flatten\\odd_0.$logic_and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124$5490": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.15-124.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 81 ],
+            "B": [ 16 ],
+            "Y": [ 112 ]
+          }
+        },
+        "$flatten\\odd_0.$ne$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155$5497": {
+          "hide_name": 1,
+          "type": "$ne",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000011",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000011",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155.10-155.20"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9, 31, 32 ],
+            "B": [ 119, 120, 121 ],
+            "Y": [ 122 ]
+          }
+        },
+        "$flatten\\odd_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:130$5492": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:130.19-130.32"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 100 ],
+            "Y": [ 123 ]
+          }
+        },
+        "$flatten\\odd_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:98$5484": {
+          "hide_name": 1,
+          "type": "$not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:98.18-98.30"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 87 ],
+            "Y": [ 124 ]
+          }
+        },
+        "$flatten\\odd_0.$procdff$5605": {
+          "hide_name": 1,
+          "type": "$dff",
+          "parameters": {
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:164.5-168.8"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 2 ],
+            "D": [ 9, 31, 32 ],
+            "Q": [ 119, 120, 121 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5518": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:134.15-134.21|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:134.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ 77, 78, 79 ],
+            "S": [ 16 ],
+            "Y": [ 125, 126, 127 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5521": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.15-124.45|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 125, 126, 127 ],
+            "B": [ "x", "x", "x" ],
+            "S": [ 112 ],
+            "Y": [ 128, 129, 130 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5524": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.15-119.24|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 128, 129, 130 ],
+            "B": [ 42, 43, 44 ],
+            "S": [ 93 ],
+            "Y": [ 94, 95, 96 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5528": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:128.10-128.23|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:128.6-133.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 123 ],
+            "S": [ 84 ],
+            "Y": [ 131 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5530": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.15-124.45|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 131 ],
+            "S": [ 112 ],
+            "Y": [ 132 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5533": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.15-119.24|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 132 ],
+            "B": [ "1" ],
+            "S": [ 93 ],
+            "Y": [ 98 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5537": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:128.10-128.23|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:128.6-133.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 66, 67, 68 ],
+            "B": [ 9, 31, 32 ],
+            "S": [ 84 ],
+            "Y": [ 133, 134, 135 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5539": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.15-124.45|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ 133, 134, 135 ],
+            "S": [ 112 ],
+            "Y": [ 136, 137, 138 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5542": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.15-119.24|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:119.11-136.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 136, 137, 138 ],
+            "B": [ 9, 31, 32 ],
+            "S": [ 93 ],
+            "Y": [ 101, 102, 103 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5545": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155.10-155.20|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155.6-160.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "1" ],
+            "S": [ 122 ],
+            "Y": [ 92 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5550": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:96.10-96.22|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:96.6-101.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 124 ],
+            "S": [ 83 ],
+            "Y": [ 139 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5552": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:95.15-95.21|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:95.11-102.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x" ],
+            "B": [ 139 ],
+            "S": [ 16 ],
+            "Y": [ 140 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5555": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:92.15-92.24|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:92.11-102.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 140 ],
+            "B": [ "1" ],
+            "S": [ 93 ],
+            "Y": [ 85 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5558": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:96.10-96.22|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:96.6-101.9"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 54, 55, 56 ],
+            "B": [ 9, 31, 32 ],
+            "S": [ 83 ],
+            "Y": [ 141, 142, 143 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5560": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:95.15-95.21|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:95.11-102.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ "x", "x", "x" ],
+            "B": [ 141, 142, 143 ],
+            "S": [ 16 ],
+            "Y": [ 144, 145, 146 ]
+          }
+        },
+        "$flatten\\odd_0.$procmux$5563": {
+          "hide_name": 1,
+          "type": "$mux",
+          "parameters": {
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "full_case": "00000000000000000000000000000001",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:92.15-92.24|/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:92.11-102.5"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "S": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 144, 145, 146 ],
+            "B": [ 9, 31, 32 ],
+            "S": [ 93 ],
+            "Y": [ 88, 89, 90 ]
+          }
+        },
+        "$flatten\\odd_0.$xor$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:85$5480": {
+          "hide_name": 1,
+          "type": "$xor",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:85.18-85.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 100 ],
+            "B": [ 87 ],
+            "Y": [ 8 ]
+          }
+        },
+        "$logic_not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5473": {
+          "hide_name": 1,
+          "type": "$logic_not",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.64-41.73"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 9 ],
+            "Y": [ 14 ]
+          }
+        },
+        "$or$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5475": {
+          "hide_name": 1,
+          "type": "$or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.18-41.74"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 12 ],
+            "B": [ 15 ],
+            "Y": [ 3 ]
+          }
+        },
+        "$procdff$5569": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "010",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:46.5-54.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 3 ],
+            "D": [ 147, 148, 149 ],
+            "Q": [ 9, 31, 32 ]
+          }
+        },
+        "$procdff$5574": {
+          "hide_name": 1,
+          "type": "$adff",
+          "parameters": {
+            "ARST_POLARITY": "00000000000000000000000000000000",
+            "ARST_VALUE": "010",
+            "CLK_POLARITY": "1",
+            "WIDTH": "00000000000000000000000000000011"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:46.5-54.8"
+          },
+          "port_directions": {
+            "ARST": "input",
+            "CLK": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "ARST": [ 7 ],
+            "CLK": [ 3 ],
+            "D": [ 4, 5, 6 ],
+            "Q": [ 147, 148, 149 ]
+          }
+        },
+        "$reduce_or$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:39$5470": {
+          "hide_name": 1,
+          "type": "$reduce_or",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000010",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:39.23-39.40"
+          },
+          "port_directions": {
+            "A": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 31, 32 ],
+            "Y": [ 11 ]
+          }
+        },
+        "even_0": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:57.10-57.68",
+            "module": "even",
+            "module_dynports": "00000000000000000000000000000001",
+            "module_hdlname": "even",
+            "module_src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:174.1-214.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "odd_0": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:59.9-59.54",
+            "module": "odd",
+            "module_dynports": "00000000000000000000000000000001",
+            "module_hdlname": "odd",
+            "module_src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:65.1-170.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        }
+      },
+      "netnames": {
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5471_Y": {
+          "hide_name": 1,
+          "bits": [ 10 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.19-41.37"
+          }
+        },
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5472_Y": {
+          "hide_name": 1,
+          "bits": [ 12 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.19-41.48"
+          }
+        },
+        "$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5474_Y": {
+          "hide_name": 1,
+          "bits": [ 15 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.53-41.73"
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$5654": {
+          "hide_name": 1,
+          "bits": [ 25, 26, 27 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$5659": {
+          "hide_name": 1,
+          "bits": [ 37, 38, 39, 40 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$5662": {
+          "hide_name": 1,
+          "bits": [ 51, 52, 53 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$5667": {
+          "hide_name": 1,
+          "bits": [ 63, 64, 65 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:528:replace_alu$5672": {
+          "hide_name": 1,
+          "bits": [ 74, 75, 76 ],
+          "attributes": {
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$5655": {
+          "hide_name": 1,
+          "bits": [ 22, 23, 24 ],
+          "attributes": {
+            "unused_bits": "0 1 2"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$5660": {
+          "hide_name": 1,
+          "bits": [ 33, 34, 35, 36 ],
+          "attributes": {
+            "unused_bits": "0 1 2 3"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$5663": {
+          "hide_name": 1,
+          "bits": [ 48, 49, 50 ],
+          "attributes": {
+            "unused_bits": "0 1 2"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$5668": {
+          "hide_name": 1,
+          "bits": [ 60, 61, 62 ],
+          "attributes": {
+            "unused_bits": "0 1 2"
+          }
+        },
+        "$auto$alumacc.cc:529:replace_alu$5673": {
+          "hide_name": 1,
+          "bits": [ 72, 73, 17 ],
+          "attributes": {
+            "unused_bits": "0 1"
+          }
+        },
+        "$auto$opt_dff.cc:247:make_patterns_logic$5619": {
+          "hide_name": 1,
+          "bits": [ 111 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:247:make_patterns_logic$5621": {
+          "hide_name": 1,
+          "bits": [ 91 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:247:make_patterns_logic$5630": {
+          "hide_name": 1,
+          "bits": [ 113 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:247:make_patterns_logic$5637": {
+          "hide_name": 1,
+          "bits": [ 114 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:247:make_patterns_logic$5639": {
+          "hide_name": 1,
+          "bits": [ 104 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:272:make_patterns_logic$5623": {
+          "hide_name": 1,
+          "bits": [ 86 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:272:make_patterns_logic$5634": {
+          "hide_name": 1,
+          "bits": [ 97 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:272:make_patterns_logic$5641": {
+          "hide_name": 1,
+          "bits": [ 99 ],
+          "attributes": {
+          }
+        },
+        "$auto$opt_dff.cc:272:make_patterns_logic$5649": {
+          "hide_name": 1,
+          "bits": [ 106 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3135:Not$5648": {
+          "hide_name": 1,
+          "bits": [ 115 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3135:Not$5675": {
+          "hide_name": 1,
+          "bits": [ 18 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3138:ReduceAnd$5657": {
+          "hide_name": 1,
+          "bits": [ 82 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3138:ReduceAnd$5665": {
+          "hide_name": 1,
+          "bits": [ 83 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3138:ReduceAnd$5670": {
+          "hide_name": 1,
+          "bits": [ 84 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3138:ReduceAnd$5677": {
+          "hide_name": 1,
+          "bits": [ 80 ],
+          "attributes": {
+          }
+        },
+        "$auto$rtlil.cc:3139:ReduceOr$5679": {
+          "hide_name": 1,
+          "bits": [ 81 ],
+          "attributes": {
+          }
+        },
+        "$auto$wreduce.cc:514:run$5652": {
+          "hide_name": 1,
+          "bits": [ 28, 29, 30, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:209.14-209.23",
+            "unused_bits": "3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31"
+          }
+        },
+        "$flatten\\even_0.$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5500_Y": {
+          "hide_name": 1,
+          "bits": [ 117 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.19-191.34"
+          }
+        },
+        "$flatten\\even_0.$and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5501_Y": {
+          "hide_name": 1,
+          "bits": [ 118 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.39-191.61"
+          }
+        },
+        "$flatten\\even_0.$logic_not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191$5499_Y": {
+          "hide_name": 1,
+          "bits": [ 116 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:191.25-191.34"
+          }
+        },
+        "$flatten\\even_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:206$5506_Y": {
+          "hide_name": 1,
+          "bits": [ 105 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:206.18-206.30"
+          }
+        },
+        "$flatten\\even_0.$procmux$5514_Y": {
+          "hide_name": 1,
+          "bits": [ 108, 109, 110 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$0\\counter2[2:0]": {
+          "hide_name": 1,
+          "bits": [ 101, 102, 103 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          }
+        },
+        "$flatten\\odd_0.$0\\counter[2:0]": {
+          "hide_name": 1,
+          "bits": [ 88, 89, 90 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:88.5-103.8"
+          }
+        },
+        "$flatten\\odd_0.$0\\initial_begin[2:0]": {
+          "hide_name": 1,
+          "bits": [ 94, 95, 96 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          }
+        },
+        "$flatten\\odd_0.$0\\out_counter2[0:0]": {
+          "hide_name": 1,
+          "bits": [ 98 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:113.5-137.8"
+          }
+        },
+        "$flatten\\odd_0.$0\\out_counter[0:0]": {
+          "hide_name": 1,
+          "bits": [ 85 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:88.5-103.8"
+          }
+        },
+        "$flatten\\odd_0.$logic_and$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124$5490_Y": {
+          "hide_name": 1,
+          "bits": [ 112 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:124.15-124.45"
+          }
+        },
+        "$flatten\\odd_0.$ne$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155$5497_Y": {
+          "hide_name": 1,
+          "bits": [ 122 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:155.10-155.20"
+          }
+        },
+        "$flatten\\odd_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:130$5492_Y": {
+          "hide_name": 1,
+          "bits": [ 123 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:130.19-130.32"
+          }
+        },
+        "$flatten\\odd_0.$not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:98$5484_Y": {
+          "hide_name": 1,
+          "bits": [ 124 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:98.18-98.30"
+          }
+        },
+        "$flatten\\odd_0.$procmux$5518_Y": {
+          "hide_name": 1,
+          "bits": [ 125, 126, 127 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5521_Y": {
+          "hide_name": 1,
+          "bits": [ 128, 129, 130 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5528_Y": {
+          "hide_name": 1,
+          "bits": [ 131 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5530_Y": {
+          "hide_name": 1,
+          "bits": [ 132 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5537_Y": {
+          "hide_name": 1,
+          "bits": [ 133, 134, 135 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5539_Y": {
+          "hide_name": 1,
+          "bits": [ 136, 137, 138 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5545_Y": {
+          "hide_name": 1,
+          "bits": [ 92 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5550_Y": {
+          "hide_name": 1,
+          "bits": [ 139 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5552_Y": {
+          "hide_name": 1,
+          "bits": [ 140 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5558_Y": {
+          "hide_name": 1,
+          "bits": [ 141, 142, 143 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$procmux$5560_Y": {
+          "hide_name": 1,
+          "bits": [ 144, 145, 146 ],
+          "attributes": {
+          }
+        },
+        "$flatten\\odd_0.$sub$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:100$5485_Y": {
+          "hide_name": 1,
+          "bits": [ 54, 55, 56 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:100.14-100.28"
+          }
+        },
+        "$flatten\\odd_0.$sub$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:132$5493_Y": {
+          "hide_name": 1,
+          "bits": [ 66, 67, 68 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:132.15-132.30"
+          }
+        },
+        "$flatten\\odd_0.$sub$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:135$5494_Y": {
+          "hide_name": 1,
+          "bits": [ 77, 78, 79 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:135.23-135.43"
+          }
+        },
+        "$logic_not$/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41$5473_Y": {
+          "hide_name": 1,
+          "bits": [ 14 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:41.64-41.73"
+          }
+        },
+        "N": {
+          "hide_name": 0,
+          "bits": [ 4, 5, 6 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:26.22-26.23"
+          }
+        },
+        "enable_odd": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:34.10-34.20"
+          }
+        },
+        "even_0.N": {
+          "hide_name": 0,
+          "bits": [ 9, 31, 32 ],
+          "attributes": {
+            "hdlname": "even_0 N",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:181.22-181.23"
+          }
+        },
+        "even_0.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "even_0 clk",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:179.11-179.14"
+          }
+        },
+        "even_0.counter": {
+          "hide_name": 0,
+          "bits": [ 19, 20, 21 ],
+          "attributes": {
+            "hdlname": "even_0 counter",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:186.20-186.27"
+          }
+        },
+        "even_0.div_2": {
+          "hide_name": 0,
+          "bits": [ 31, 32, "0" ],
+          "attributes": {
+            "hdlname": "even_0 div_2",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:188.21-188.26"
+          }
+        },
+        "even_0.not_zero": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "even_0 not_zero",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:183.11-183.19"
+          }
+        },
+        "even_0.out": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "hdlname": "even_0 out",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:180.12-180.15"
+          }
+        },
+        "even_0.out_counter": {
+          "hide_name": 0,
+          "bits": [ 107 ],
+          "attributes": {
+            "hdlname": "even_0 out_counter",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:187.9-187.20"
+          }
+        },
+        "even_0.resetb": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "hdlname": "even_0 resetb",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:182.11-182.17"
+          }
+        },
+        "in": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:25.11-25.13"
+          }
+        },
+        "not_zero": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:32.10-32.18"
+          }
+        },
+        "odd_0.N": {
+          "hide_name": 0,
+          "bits": [ 9, 31, 32 ],
+          "attributes": {
+            "hdlname": "odd_0 N",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:72.22-72.23"
+          }
+        },
+        "odd_0.clk": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "hdlname": "odd_0 clk",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:70.11-70.14"
+          }
+        },
+        "odd_0.counter": {
+          "hide_name": 0,
+          "bits": [ 45, 46, 47 ],
+          "attributes": {
+            "hdlname": "odd_0 counter",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:76.20-76.27"
+          }
+        },
+        "odd_0.counter2": {
+          "hide_name": 0,
+          "bits": [ 57, 58, 59 ],
+          "attributes": {
+            "hdlname": "odd_0 counter2",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:77.20-77.28"
+          }
+        },
+        "odd_0.enable": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+            "hdlname": "odd_0 enable",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:74.11-74.17"
+          }
+        },
+        "odd_0.initial_begin": {
+          "hide_name": 0,
+          "bits": [ 69, 70, 71 ],
+          "attributes": {
+            "hdlname": "odd_0 initial_begin",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:105.20-105.33"
+          }
+        },
+        "odd_0.interm_3": {
+          "hide_name": 0,
+          "bits": [ 41, 42, 43, 44 ],
+          "attributes": {
+            "hdlname": "odd_0 interm_3",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:106.19-106.27",
+            "unused_bits": "0 "
+          }
+        },
+        "odd_0.old_N": {
+          "hide_name": 0,
+          "bits": [ 119, 120, 121 ],
+          "attributes": {
+            "hdlname": "odd_0 old_N",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:81.20-81.25"
+          }
+        },
+        "odd_0.out": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "hdlname": "odd_0 out",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:71.12-71.15"
+          }
+        },
+        "odd_0.out_counter": {
+          "hide_name": 0,
+          "bits": [ 87 ],
+          "attributes": {
+            "hdlname": "odd_0 out_counter",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:78.9-78.20"
+          }
+        },
+        "odd_0.out_counter2": {
+          "hide_name": 0,
+          "bits": [ 100 ],
+          "attributes": {
+            "hdlname": "odd_0 out_counter2",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:79.9-79.21"
+          }
+        },
+        "odd_0.resetb": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "hdlname": "odd_0 resetb",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:73.11-73.17"
+          }
+        },
+        "odd_0.rst_pulse": {
+          "hide_name": 0,
+          "bits": [ 93 ],
+          "attributes": {
+            "hdlname": "odd_0 rst_pulse",
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:80.9-80.18"
+          }
+        },
+        "out": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:28.12-28.15"
+          }
+        },
+        "out_even": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:31.10-31.18"
+          }
+        },
+        "out_odd": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:30.10-30.17"
+          }
+        },
+        "resetb": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:27.11-27.17"
+          }
+        },
+        "syncN": {
+          "hide_name": 0,
+          "bits": [ 9, 31, 32 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:36.20-36.25"
+          }
+        },
+        "syncNp": {
+          "hide_name": 0,
+          "bits": [ 147, 148, 149 ],
+          "attributes": {
+            "src": "/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src/clk_div/clock_div.v:37.20-37.26"
+          }
+        }
+      }
+    }
+  }
+}
