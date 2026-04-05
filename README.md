@@ -632,3 +632,212 @@ We can see that the the waveform corresponds to gate-level netlist activity of t
 
 ## PHASE 6 — RTL vs GLS Comparison
 There are no test result mismatch between RTL and GLS
+
+# WEEK 6
+
+## Independent Block Implementation + Gate-Level Validation
+
+## PHASE 1 - Block Selection and Analysis
+
+Go to this location:
+
+```bash
+cd /home/sangesh007/Downloads/vsdsquadron-soc/caravel/verilog/rtl
+```
+and select any RTL module. I am selecting clock divider module so copying clock_div.v file
+
+Paste the verilog file in this location:
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/src
+```
+
+``` bash
+mkdir clk_div
+```
+
+Paste the verilog file in this folder
+
+## PHASE 2 - RTL-to-GDS Implementation
+
+Go to this location:
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/designs/sky130hd
+```
+And create a folder named clk_div
+```bash
+mkdir clk_div
+```
+Create 2 files config.mk and constraint.sdc
+
+Add these contents in the config.mk file
+
+<img width="733" height="326" alt="Screenshot 2026-04-05 222037" src="https://github.com/user-attachments/assets/26d3dbc2-ad32-4790-b598-3a407b59df2f" />
+
+Add these contents in the constraint.sdc file
+
+<img width="734" height="218" alt="Screenshot 2026-04-05 222158" src="https://github.com/user-attachments/assets/ef679b5e-d76a-4465-90ee-06e70a817fec" />
+
+
+Go to this location:
+
+```bash
+cd /home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow
+vi Makefile
+```
+
+Add these changes to the makefile
+
+<img width="733" height="445" alt="Screenshot 2026-04-05 222427" src="https://github.com/user-attachments/assets/7e13e07a-68a8-4e09-b89d-3f191aa2def8" />
+
+To execute the RTL to GDS flow, 
+
+```bash
+make clean_all
+make YOSYS_EXE=$(which yosys) OPENROAD_EXE=$(which openroad)
+```
+It will end up like this
+
+<img width="1412" height="728" alt="Screenshot 2026-04-02 173325" src="https://github.com/user-attachments/assets/17fd32df-d75d-46e6-8adf-706b0844b162" />
+
+All the log file of Synthesis, Floorplanning, Placement, routing, CTS etc will be available in this location:
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/logs/sky130hd/clk_div/base
+```
+Logs generated:
+
+<img width="736" height="307" alt="Screenshot 2026-04-05 223022" src="https://github.com/user-attachments/assets/1bc6a31c-bc55-4363-9b6a-79efffde18c9" />
+
+All the reports of each stage is available at this location:
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/reports/sky130hd/clk_div/base
+```
+Reports generated:
+
+<img width="733" height="278" alt="Screenshot 2026-04-05 223324" src="https://github.com/user-attachments/assets/8c7478d8-a934-4c46-ac0e-7810ee697f5c" />
+
+## PHASE 3 — Generate Implementation Outputs
+
+All the Outputs will be available at this location:
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/results/sky130hd/clk_div/base
+```
+Outputs generated:
+
+<img width="738" height="344" alt="Screenshot 2026-04-05 223421" src="https://github.com/user-attachments/assets/a758ceb0-e84a-4310-a133-738c4722452b" />
+
+To view the GDS file,
+```bash
+make klayout_6_final.gds
+```
+GDS Layout:
+
+<img width="2559" height="1389" alt="Screenshot 2026-04-02 173512" src="https://github.com/user-attachments/assets/47dcd17a-d15a-484a-9f01-bfd1761434c0" />
+
+## PHASE 4 — Gate-Level Simulation (GLS)
+The gate level netlist is found in this path:
+
+```bash
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/results/sky130hd/clk_div/base/6_final.v
+```
+The standard cells will be found in this path:
+```bash
+/home/sangesh007/.volare/sky130A/libs.ref/sky130_fd_sc_hd/verilog/sky130_fd_sc_hd.v
+/home/sangesh007/.volare/sky130A/libs.ref/sky130_fd_sc_hd/verilog/primitives.v
+```
+## For standalone tests
+
+In the Makefile of each standalone test make these changes :-
+
+Go to any this location and open any test:
+```bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-standalone/gpio_mgmt
+vi Makefile
+```
+and make the changes accordingly
+
+<img width="783" height="336" alt="Screenshot 2026-04-05 224020" src="https://github.com/user-attachments/assets/1fc7d2b9-4658-47e8-a43e-3be0d7af86fe" />
+
+<img width="1073" height="300" alt="Screenshot 2026-04-05 224102" src="https://github.com/user-attachments/assets/1299bc6c-4f8f-416b-bdb1-951da324b24e" />
+
+Now run the each tests and note down the results
+
+| Test Name   | Status |
+|------------|--------|
+| GPIO Mgmt  | ✅ PASS |
+| mem        | ✅ PASS |
+| uart       | ✅ PASS |
+| timer      | ❌ FAIL |
+| irq        | ❌ FAIL |
+| debug      | ❌ FAIL |
+| spi_master | ✅ PASS |
+
+## For caravel tests
+
+Go to this location:
+``` bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-caravel/ 
+```
+
+Go to any test and open the makefile and make the following changes
+
+<img width="703" height="327" alt="Screenshot 2026-04-05 225944" src="https://github.com/user-attachments/assets/090e7850-317b-41cf-abe9-f92c5e6c8cd9" />
+
+<img width="856" height="318" alt="Screenshot 2026-04-05 230043" src="https://github.com/user-attachments/assets/a5f77ed7-4671-4071-8437-2c45978d1d08" />
+
+Caravel expects the user_project_wrapper module so we have to make some modifications
+
+Go to this location:
+``` bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel/verilog/gl
+```
+Create a new file clk_div_gl.v and paste the contents of 
+
+``` bash 
+/home/sangesh007/Downloads/vsd-scl180-orfs-main/orfs/flow/results/sky130hd/clk_div/base/6_final.v
+```
+Create a file named gl.v and and copy the content of already existing gatelevel netlist of user_project_wrapper file and make these following changes
+
+<img width="307" height="110" alt="Screenshot 2026-04-05 230840" src="https://github.com/user-attachments/assets/0cf80ec8-5c4b-463d-9a75-7c796947c8df" />
+
+<img width="468" height="279" alt="Screenshot 2026-04-05 230937" src="https://github.com/user-attachments/assets/67f51c9e-0f20-4e12-8961-002ec716f04b" />
+
+
+And remove the existing RTL level file of clk_div.v otherwise it will take the RTL file instead of Gate level during simulation
+
+Now go to this location, run each tests and note down the results
+
+``` bash
+/home/sangesh007/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-caravel
+```
+
+| Test Name      | Status   |
+|----------------|----------|
+| user_pass_thru | ✅ PASS  |
+| uart           | ✅ PASS  |
+| sysctrl        | ❌ FAIL  |
+| sram_exec      | ✅ PASS  |
+| spi_master     | ✅ PASS  |
+| pullupdown     | ✅ PASS  |
+| pll            | ❌ FAIL  |
+| pass_thru_fix  | ✅ PASS  |
+| mem            | ✅ PASS  |
+| hkspi_power    | ✅ PASS  |
+| gpio_mgmt      | ✅ PASS  |
+| hkspi          | ✅ PASS  |
+
+## PHASE 5 — Waveform Validation
+
+Open any test
+Example:
+```bash
+Cd ~/Downloads/vsdsquadron-soc/caravel_mgmt_soc_litex/verilog/dv/tests-standalone/gpio_mgmt
+gtkwave GL-gpio_mgmt.vcd
+```
+
+<img width="1849" height="959" alt="Screenshot 2026-04-05 231639" src="https://github.com/user-attachments/assets/c9f76562-7a67-426a-b128-2f378afa6d17" />
+
+
+We can see that the the waveform corresponds to gate-level netlist activity of the standard cell sky130_fd_sc_hd_031a_1
+
+## PHASE 6 — RTL vs GLS Comparison
+There are no test result mismatch between RTL and GLS
